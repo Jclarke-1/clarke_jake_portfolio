@@ -1,0 +1,9 @@
+@use '../abstracts' as a;
+
+div .logosvg {
+    height: 35px;
+    width: 35px;
+    display: inline;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

@@ -1,1 +1,13 @@
-@use 'abstracts' as a;
+@use '../abstracts' as a;
+
+.contact-button {
+    background-color: a.$secondary-color;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}

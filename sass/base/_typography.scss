@@ -1,1 +1,13 @@
-@use 'abstracts' as a;
+@use '../abstracts' as a;
+
+body {
+    font-family: a.$body-font-family;
+   
+    font-size: a.$base-font-size;
+    font-weight: a.$base-font-weight;
+}
+
+h1, h2, li, details {
+    font-family: a.$heading-font-family;
+    font-weight: a.$base-font-weight
+}

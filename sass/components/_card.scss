@@ -1,1 +1,38 @@
-@use 'abstracts' as a;
+@use '../abstracts' as a;
+
+.featured-projects {
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+    h2 {
+        background-color: a.$tetiary-color;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .project {
+        display: flex;
+        align-items: center;
+    }
+}
+
+ div .explore {
+     background-color: a.$accent-color;
+     width: 200px;
+     margin-bottom: 20px;
+     margin-top: 20px;
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+    a {
+    margin-left: 60px;
+    text-decoration: none;
+    color: white;
+ }
+    img {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    }
+ }
