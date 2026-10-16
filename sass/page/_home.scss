@@ -1,1 +1,43 @@
-@use 'abstracts' as a;
+@use '../abstracts' as a;
+
+details {
+     margin-bottom: 30px;
+    background-color: a.$details-color;
+    summary {
+        background-color: a.$summary-color;
+        color: white;
+        padding: 13px;
+    }
+    p {
+        margin-bottom: 13px;
+        margin-top: 13px;
+        padding: 13px;
+    }
+}
+
+.case-studies {
+    margin-top: 20px;
+    margin-bottom: 60px;
+       h2 {
+        background-color: a.$tetiary-color;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.casestudy {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.get-in-touch {
+      margin-top: 20px;
+    margin-bottom: 60px;
+       h2 {
+        background-color: a.$tetiary-color;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+}

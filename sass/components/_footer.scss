@@ -1,1 +1,8 @@
-@use 'abstracts' as a;
+@use '../abstracts' as a;
+
+footer {
+    margin-top: 20px;
+    p {
+        text-align: center;
+    }
+}
