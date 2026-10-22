@@ -2,16 +2,18 @@
 
 details {
      margin-bottom: 30px;
-    background-color: a.$details-color;
+    background-color: a.$accent-color;
     summary {
         background-color: a.$summary-color;
         color: white;
         padding: 13px;
+        border-bottom: 1px solid white;
     }
     p {
         margin-bottom: 13px;
         margin-top: 13px;
         padding: 13px;
+        color: white;
     }
 }
 
