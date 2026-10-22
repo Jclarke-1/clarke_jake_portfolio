@@ -6,6 +6,9 @@
     margin-bottom: 20px;
     padding: 10px;
     text-align: center;
+    border: 2px solid a.$primary-color;
+    cursor: pointer;
+    font-family: a.$heading-font-family;
     a {
         text-decoration: none;
         color: black;

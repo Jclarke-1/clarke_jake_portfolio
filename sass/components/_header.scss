@@ -1,1 +1,11 @@
 @use '../abstracts' as a;
+
+#hero-section {
+    
+h2, h3 {
+    font-family: a.$body-font-family;
+    font-weight: a.$base-font-weight;
+}
+
+
+}

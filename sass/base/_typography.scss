@@ -2,12 +2,22 @@
 
 body {
     font-family: a.$body-font-family;
-   
     font-size: a.$base-font-size;
     font-weight: a.$base-font-weight;
+
+    h2 {
+    font-family: a.$heading-font-family;
+    font-weight: a.$base-font-weight;
+    }
+
+    h3 {
+        font-family: a.$body-font-family;
+        font-size: a.$base-font-size;
+        font-weight: a.$base-font-weight;
+    }
 }
 
-h1, h2, li, details {
+h1, li, details {
     font-family: a.$heading-font-family;
-    font-weight: a.$base-font-weight
+    font-weight: a.$base-font-weight;
 }
