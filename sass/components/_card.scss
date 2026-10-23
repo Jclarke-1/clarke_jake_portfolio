@@ -1,7 +1,7 @@
 @use '../abstracts' as a;
 
 .featured-projects {
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 60px;
 
     h2 {
@@ -24,22 +24,31 @@
     }
 
 
- div .explore {
+ div .explore-bttn {
      background-color: a.$accent-color;
-     width: 200px;
+     padding: 10px 0;
      margin-bottom: 20px;
      margin-top: 20px;
-     display: flex;
-     align-items: center;
      cursor: pointer;
-    a {
-    margin-left: 60px;
+      text-align: center;
+ } 
+
+     .explore a {
     text-decoration: none;
     color: white;
  }
-    img {
-    margin: 0;
-    padding: 0;
-    margin-left: 20px;
+    
+
+ @media screen and (min-width: 768px) {
+    div  .explore-bttn {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        .explore a {
+           text-align: center;
+        }
     }
  }
+
+  @media screen and (min-width: 1200px) {
+
+  }

@@ -1,8 +1,26 @@
 @use '../abstracts' as a;
 
 footer {
+     background-color: a.$primary-color;
     margin-top: 20px;
     p {
         text-align: center;
+    }
+    ul li {
+        list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            &:hover {
+                border-bottom: 1px solid white;
+            }
+        }
+}
+
+@media screen and (min-width: 768px) {
+    #footer-nav ul li {
+        display: inline;
+        padding: 10px 20px;
     }
 }

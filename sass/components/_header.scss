@@ -7,5 +7,9 @@ h2, h3 {
     font-weight: a.$base-font-weight;
 }
 
+}
 
+header {
+    background-color: a.$primary-color;
+    border-bottom: 1px solid white;
 }
