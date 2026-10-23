@@ -1,11 +1,21 @@
 @use '../abstracts' as a;
 
-.drop-down {
-    width: 35px;
-    height: 35px;
-    margin-top: 15px;
-    padding: 0;
+// .drop-down {
+//     width: 35px;
+//     height: 35px;
+//     margin-top: 15px;
+//     padding: 0;
+//     border: 0;
+// }
+
+#main-nav button {
+    background: url(../images/drop-down.svg) center no-repeat;
+    width: 45px;
+    height: 45px;
     border: 0;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin-top: 15px;
 }
 
  header ul li {
@@ -24,12 +34,32 @@
     }
 }
 
+#burger-con {
+        display: none;
+}
+
+#burger-con ul li {
+    z-index: 1;
+    position: absolute;
+    background-color: a.$tetiary-color;
+}
+
+#burger-con.slide-toggle {
+    display: block;
+}
+
 @media screen and (min-width: 768px) {
-    #main-nav ul li {
+   #burger-con, #main-nav ul li {
         display: inline;
         background-color: transparent;
     }
-    .drop-down {
+    #main-nav button {
         display: none;
+    }
+
+    #burger-con ul li {
+        z-index: 0;
+        position: relative;
+        background-color: transparent;
     }
 }
