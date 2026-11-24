@@ -16,10 +16,10 @@
             <button id="nav-button"></button>
             <div id="burger-con">
             <ul id="nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Welcome</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#hero-section">Home</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             </div>
         </nav>
@@ -39,8 +39,8 @@
         <h3>Let's Build Something Great Together</h3>
       </div>
         <div class="col-start-4 col-end-5 m-col-start-10 m-col-end-12 l-col-start-10 l-col-end-12">
-            <a href="#"><img src="images/indeed-logo.svg" alt="indeed logo" class="logosvg indeed-link"></a>
-            <a href="#"><img src="images/github-logo.svg" alt="github logo" class="logosvg git-link"></a>
+            <a href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage"><img src="images/indeed-logo.svg" alt="indeed logo" class="logosvg indeed-link"></a>
+            <a href="https://github.com/Jclarke-1'"><img src="images/github-logo.svg" alt="github logo" class="logosvg git-link"></a>
         </div>
     </section>
 
@@ -53,14 +53,14 @@
   <div class="grid-con center-grid-con">
     <div class="player-con col-span-full m-col-start-2 m-col-end-12 l-col-start-2 l-col-end-12">
         <video controls preload="metadata">
-            <source src="images/clarke_jake_demo.mp4" type="video/mp4">
+            <source src="video/clarke_jake_demo.mp4" type="video/mp4">
             <p>Uh Oh! Seems like your Browser does not support the HTML5 Video Tag! Please change browsers to view the video or update your Browser to a newer version.</p>
         </video>
     </div>
   </div>
 
   <section class="grid-con center-grid-con">
-    <div class="case-studies col-span-3 m-col-span-5 l-col-span-5">
+    <div class="case-studies col-span-3 m-col-span-5 l-col-span-5" id="case-studies">
         <h2>Case Studies</h2>
     </div>
       <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
@@ -93,7 +93,7 @@
 
    <section class="grid-con center-grid-con">
 
-    <div class="featured-projects col-span-3 m-col-span-5 l-col-span-5">
+    <div class="featured-projects col-span-3 m-col-span-5 l-col-span-5" id="projects">
         <h2>Featured Projects</h2>
     </div>
 
@@ -171,7 +171,7 @@
 
 </section>
 
-  <section class="form grid-con center-grid-con">
+  <section class="form grid-con center-grid-con" id="contact">
     <div class="get-in-touch col-span-3 m-col-span-5 l-col-span-5">
         <h2>Get in Touch</h2>
     </div>
@@ -195,23 +195,29 @@
         <div class="col-start-1 col-end-4 m-col-end-10 l-col-start-2 l-col-end-8">
              <nav id="footer-nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Welcome</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="hero-section">Home</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         </div>
         <div class="col-start-4 col-end-5 m-col-start-10 m-col-end-12 l-col-start-10 l-col-end-12">
-            <a href="#"><img src="images/indeed-logo.svg" alt="indeed logo" class="logosvg indeed-link"></a>
-            <a href="#"><img src="images/github-logo.svg" alt="github logo" class="logosvg git-link"></a>
+            <a href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage"><img src="images/indeed-logo.svg" alt="indeed logo" class="logosvg indeed-link"></a>
+            <a href="https://github.com/Jclarke-1'"><img src="images/github-logo.svg" alt="github logo" class="logosvg git-link"></a>
         </div>
         <div class="col-span-full">
             <p>&#169;Jake Clarke 2026</p>
         </div>
     </section>
   </footer>
-
+   <!-- main library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- ScrollTo plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <!-- JS plugin -->
     <script src="js/main.js"></script>
 </body>
 </html>

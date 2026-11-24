@@ -1,15 +1,19 @@
+(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin);
 //variables
+
+const navLinks = document.querySelectorAll(".nav nav ul li a");
 
 const burgerCon = document.querySelector("#burger-con");
 const menuButton = document.querySelector("#nav-button");
-const gitLink = document.querySelector(".git-link");
-const indeedLink = document.querySelector(".indeed-link");
+
 
 const caseStudies = [
  {title: "Fanshawe Industry Night Site", link: ""},
  {title: "Bluetooth Speaker", link: ""},
  {title: "Quatro Brand Refresh", link: ""}
-]
+];
 
 caseStudies.forEach((caseStudies) => {
 //put case studies into their own divs and create an img for each to show off which project they represent, and they should have an eventlistener for when they are clicked it will open a new window to display the linked case study
@@ -20,18 +24,23 @@ caseStudies.forEach((caseStudies) => {
 function menuDrop() {
     burgerCon.classList.toggle("slide-toggle");
     menuButton.classList.toggle("expanded");
-}
+};
 
-function githubPage() {
-    window.open('https://github.com/Jclarke-1');
-}
-
-function indeedPage() {
-    window.open('https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage');
-}
+function scrollLink(e) {
+    e.preventDefault();
+    console.log(e.currentTarget.hash);
+    let selectedLink = e.currentTarget.hash;
+    gsap.to(window, 
+        { duration: 4, 
+            scrollTo: { y: `${selectedLink}`, 
+            offsetY: 50 } });
+};
 
 //eventlisteners
 
+navLinks.forEach((link) => {
+    link.addEventListener("click", scrollLink);
+});
+
 menuButton.addEventListener("click", menuDrop);
-gitLink.addEventListener("click", githubPage);
-indeedLink.addEventListener("click", indeedPage);
+})();
