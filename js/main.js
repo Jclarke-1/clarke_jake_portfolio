@@ -3,7 +3,7 @@
     gsap.registerPlugin(ScrollToPlugin);
 //variables
 
-const navLinks = document.querySelectorAll(".nav nav ul li a");
+const navLinks = document.querySelectorAll(" nav ul li a");
 
 const burgerCon = document.querySelector("#burger-con");
 const menuButton = document.querySelector("#nav-button");
@@ -31,9 +31,9 @@ function scrollLink(e) {
     console.log(e.currentTarget.hash);
     let selectedLink = e.currentTarget.hash;
     gsap.to(window, 
-        { duration: 4, 
+        { duration: 2, 
             scrollTo: { y: `${selectedLink}`, 
-            offsetY: 50 } });
+            offsetY: 80 } });
 };
 
 //eventlisteners
