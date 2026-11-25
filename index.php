@@ -1,0 +1,228 @@
+<?php 
+require_once __DIR__ . '/includes/scripts/database.php';
+
+$connection = getConnection();
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Clarke Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+     <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <header class="grid-con center-grid-con">
+        <nav id="main-nav" class="col-start-1 col-end-4 m-col-start-2 m-col-end-11 l-col-start-2 l-col-end-8">
+            <button id="nav-button"></button>
+            <div id="burger-con">
+            <ul id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            </div>
+        </nav>
+        <div class="col-start-5 col-end-5 m-col-start-12 m-col-end-13 l-col-start-12 l-col-end-13">
+            <img src="images/clarke_jake_logo.svg" alt="logo" id="brand_logo">
+        </div>
+    </header>
+
+    <section id="hero-section" class="box grid-con center-grid-con">
+        <div class="box col-span-full m-col-start-2 m-col-end-6 l-col-start-2 l-col-end-5" id="home">
+            <h1>Jake Clarke</h1>
+        </div>
+      <div class="col-start-1 col-end-5 m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-7">
+        <h2>Graphic, Web and Motion Designer</h2>
+      </div>
+        <div class="col-start-1 col-end-5 m-col-start-2 m-col-end-8 l-col-start-2 l-col-end-7">
+        <h3>Let's Build Something Great Together</h3>
+      </div>
+        <div class="col-start-4 col-end-5 m-col-start-10 m-col-end-12 l-col-start-10 l-col-end-12">
+            <a href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage"><img src="images/indeed-logo.svg" alt="indeed logo" class="logosvg indeed-link"></a>
+            <a href="https://github.com/Jclarke-1'"><img src="images/github-logo.svg" alt="github logo" class="logosvg git-link"></a>
+        </div>
+    </section>
+
+  <div class="grid-con center-grid-con">
+    <div class="contact-button col-start-2 col-end-4 m-col-start-5 m-col-end-8 l-col-start-5 l-col-end-8">
+     <a href="#">Contact Me</a>
+    </div>
+  </div>
+
+  <div class="grid-con center-grid-con">
+    <div class="player-con col-span-full m-col-start-2 m-col-end-12 l-col-start-2 l-col-end-12">
+        <video controls preload="metadata">
+            <source src="video/clarke_jake_demo.mp4" type="video/mp4">
+            <p>Uh Oh! Seems like your Browser does not support the HTML5 Video Tag! Please change browsers to view the video or update your Browser to a newer version.</p>
+        </video>
+    </div>
+  </div>
+
+  <section class="grid-con center-grid-con">
+    <div class="case-studies col-span-3 m-col-span-5 l-col-span-5" id="case-studies">
+        <h2>Case Studies</h2>
+    </div>
+      <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
+        <h3>Fanshawe Industry Night Site</h3>
+    </div>
+    <div class="image-placeholder casestudy col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">Project 1</div>
+    
+    <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
+        <h3>Bluetooth Speaker</h3>
+     </div>
+    <div class="image-placeholder casestudy col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">Project 2</div>
+    
+    <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
+        <h3>Quatro Brand Refresh</h3>
+    </div>
+    <div class="image-placeholder casestudy col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">Project 3</div>
+  </section>
+
+  <section class="grid-con center-grid-con" id="welcome-section">
+    <h2 class="visually-hidden">Welcome</h2>
+    <div class="col-span-full m-col-span-full l-col-span-full">
+        <details>
+            <summary> Welcome</summary>
+            <p>Welcome and thank you for visiting my portfolio site! Here is a little about me</p>
+            <p>I am based in London, Ontario. I enjoy puzzling out designs out and making them come to life through my work.</p>
+            <p>I have some experience working in 3D and 2D animation, and I am always eager to learn new techniques involving code and animation.</p>
+        </details>
+    </div>
+  </section>
+
+   <section class="grid-con center-grid-con">
+
+    <div class="featured-projects col-span-3 m-col-span-5 l-col-span-5" id="projects">
+        <h2>Featured Projects</h2>
+    </div>
+
+    <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
+        <h3>Fanshawe Industry Night Site</h3>
+    </div>
+    <div class="project col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">
+    <div class="image-placeholder" id="project1">Project 1</div>
+    <div class="col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-type">
+        <p>Webpage Redesign</p>
+    </div>
+    <div>
+     <img src="images/html-logo.svg" alt="html logo" class="logosvg">
+    <img src="images/figma-logo.svg" alt="figma logo" class="logosvg">
+    <img src="images/javascript-logo.svg" alt="javascript logo" class="logosvg">
+    <img src="images/css-logo.svg" alt="css logo" class="logosvg">
+    </div>
+    <div class="project-desc col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10">
+        <p>A team based web-page redesign for the Fanshawe Interactive 2027 Website with the purpose of showing off our skills and advertising the IDP program. I worked on the project as the project manager and one of the front-end devs.</p>
+    </div>
+    <div class="explore-bttn col-span-full m-col-start-3 m-col-end-6 l-col-start-3 l-col-end-6">
+        <div class="explore"><a href="#">Explore</a></div>
+    </div>
+    </div>
+
+
+    <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
+        <h3>Bluetooth Speaker</h3>
+     </div>
+        <div class="project col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">
+    <div class="image-placeholder" id="project2">Project 2</div>
+    <div class="col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-type">
+        <p>Webpage and 3D Design</p>
+    </div>
+     <div>
+         <img src="images/html-logo.svg" alt="html logo" class="logosvg">
+    <img src="images/figma-logo.svg" alt="figma logo" class="logosvg">
+    <img src="images/javascript-logo.svg" alt="javascript logo" class="logosvg">
+    <img src="images/css-logo.svg" alt="css logo" class="logosvg">
+     <img src="images/cinema-logo.svg" alt="cinema4d logo" class="logosvg">
+     </div>
+      <div class="project-desc col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10">
+        <p>A webpage design featuring a 3D model of a bluetooth speaker of my own design using hotspots to show off the innerworkings of the product.</p>
+    </div>
+    <div class="explore-bttn col-span-full m-col-start-3 m-col-end-6 l-col-start-3 l-col-end-6">
+        <div class="explore"><a href="#">Explore</a></div>
+    </div>
+    </div>
+
+
+
+    <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
+        <h3>Quatro Brand Refresh</h3>
+    </div>
+        <div class="project col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">
+    <div class="image-placeholder" id="project3">Project 3</div>
+      <div class="col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-type">
+        <p>Webpage and 3D Design</p>
+    </div>
+   <div class="col-span-full m-col-start-5 m-col-end-9 l-col-start-6 l-col-end-9">
+         <img src="images/html-logo.svg" alt="html logo" class="logosvg">
+    <img src="images/figma-logo.svg" alt="figma logo" class="logosvg">
+    <img src="images/javascript-logo.svg" alt="javascript logo" class="logosvg">
+    <img src="images/css-logo.svg" alt="css logo" class="logosvg">
+     <img src="images/cinema-logo.svg" alt="cinema4d logo" class="logosvg">
+     </div>
+    <div class="project-desc col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10">
+        <p>A webpage design featuring a 3D model of a drink bottle of my own design and a complete brand refresh featuring three working pages.</p>
+    </div>
+
+    <div class="explore-bttn col-span-full m-col-start-3 m-col-end-6 l-col-start-3 l-col-end-6">
+        <div class="explore"><a href="#">Explore</a></div>
+    </div>
+    </div>
+
+</section>
+
+  <section class="form grid-con center-grid-con" id="contact">
+    <div class="get-in-touch col-span-3 m-col-span-5 l-col-span-5">
+        <h2>Get in Touch</h2>
+    </div>
+    <div id="form" class="col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">
+        <form>
+           <label for="name"> Name</label> 
+           <input type="text" name="name" id="name" value="Your Name">
+           <label for="email">Email</label>
+           <input type="text" name="email" id="email" value="Email Address">
+           <label for="message">Message</label>
+          <textarea name="message" id="message">Message...</textarea>
+          <p>*Fill out all required Sections above</p>
+          <input type="submit" value="Send Your Message">
+        </form>
+    </div>
+  </section>
+
+  <footer>
+    <section class="grid-con center-grid-con">
+        <h2 class="visually-hidden">Footer Nav</h2>
+        <div class="col-start-1 col-end-4 m-col-end-10 l-col-start-2 l-col-end-8">
+             <nav id="footer-nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+        <div class="col-start-4 col-end-5 m-col-start-10 m-col-end-12 l-col-start-10 l-col-end-12">
+            <a href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage"><img src="images/indeed-logo.svg" alt="indeed logo" class="logosvg indeed-link"></a>
+            <a href="https://github.com/Jclarke-1'"><img src="images/github-logo.svg" alt="github logo" class="logosvg git-link"></a>
+        </div>
+        <div class="col-span-full">
+            <p>&#169;Jake Clarke 2026</p>
+        </div>
+    </section>
+  </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- ScrollTo plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <!-- JS plugin -->
+    <script src="js/main.js"></script>
+</body>
+</html>
