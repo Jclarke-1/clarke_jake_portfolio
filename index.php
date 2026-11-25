@@ -2,7 +2,16 @@
 require_once __DIR__ . '/includes/scripts/database.php';
 
 $connection = getConnection();
+session_start();
 
+$errors = $_SESSION['errors'] ?? [];
+$submittedInputs = $_SESSION['form_input'] ?? [];
+$submittedName = $submittedInputs['name'] ?? '';
+$submittedEmail = $submittedInputs['email'] ?? '';
+$submittedMessage = $submittedInputs['message'] ?? '';
+
+$_SESSION['form_input'] = [];
+$_SESSION['form_errors'] = [];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -182,14 +191,45 @@ $connection = getConnection();
         <h2>Get in Touch</h2>
     </div>
     <div id="form" class="col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">
-        <form>
+        <form action="includes/scripts/process_form.php" method="POST">
+
+        <?php 
+        if(array_key_exists('name', $errors)) {
+            echo '<p style="color:red">' . $errors['name'] . '</p>';
+        }
+        ?>
            <label for="name"> Name</label> 
            <input type="text" name="name" id="name" value="Your Name">
+           <?php if (count($errors) > 0 && $submittedName) {
+                    echo 'value="'. $submittedName . '"'; }?>
+
+         <?php
+             if(array_key_exists('email', $errors)) {
+                echo '<p style="color:red">' . $errors['email'] . '</p>';
+            }
+            ?>
            <label for="email">Email</label>
            <input type="text" name="email" id="email" value="Email Address">
+             <?php if (count($errors) > 0 && $submittedEmail) {
+                    echo 'value="'. $submittedEmail . '"'; }?>
+
+           <?php 
+           if(array_key_exists('message', $errors)) {
+            echo '<p style="color:red">' . $errors['message'] . '</p>';
+           }
+           ?>
            <label for="message">Message</label>
           <textarea name="message" id="message">Message...</textarea>
+          <?php 
+          if(count($errors) > 0 && $submittedMessage) {
+            echo 'value="' . $submittedMessage . '"';
+          }
+          ?>
+
+
           <p>*Fill out all required Sections above</p>
+
+
           <input type="submit" value="Send Your Message">
         </form>
     </div>
