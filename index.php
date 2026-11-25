@@ -12,6 +12,8 @@ $submittedMessage = $submittedInputs['message'] ?? '';
 
 $_SESSION['form_input'] = [];
 $_SESSION['form_errors'] = [];
+
+$queryResult = mysqli_query($connection, 'SELECT * FROM projects');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,17 +83,17 @@ $_SESSION['form_errors'] = [];
       <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
         <h3>Fanshawe Industry Night Site</h3>
     </div>
-    <div class="image-placeholder casestudy col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">Project 1</div>
+    <div class="casestudy col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10"><img src="images/industry-night.png" alt="fanshawe industry night"></div>
     
     <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
         <h3>Bluetooth Speaker</h3>
      </div>
-    <div class="image-placeholder casestudy col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">Project 2</div>
+    <div class="casestudy col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10"><img src="images/bluetooth-speaker.png" alt="bluetooth speaker"></div>
     
     <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
         <h3>Quatro Brand Refresh</h3>
     </div>
-    <div class="image-placeholder casestudy col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">Project 3</div>
+    <div class="casestudy col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10"><img src="images/quatro-refresh.png" alt="quatro brand refresh"></div>
   </section>
 
   <section class="grid-con center-grid-con" id="welcome-section">
@@ -112,77 +114,36 @@ $_SESSION['form_errors'] = [];
         <h2>Featured Projects</h2>
     </div>
 
-    <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
-        <h3>Fanshawe Industry Night Site</h3>
+    <?php while ($projects = mysqli_fetch_array($queryResult)): ?>
+    <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-8 l-col-start-5 l-col-end-8 project-showcase">
+        <h3><?php echo $projects['project_title']; ?></h3>
     </div>
+
+     <?php if ($projects['project_img']):?>
     <div class="project col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">
-    <div class="image-placeholder" id="project1">Project 1</div>
-    <div class="col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-type">
-        <p>Webpage Redesign</p>
+        <img src="<?php echo $projects['project_img'];?>" alt="<?php echo $projects['project_title']?> image">
     </div>
-    <div>
-     <img src="images/html-logo.svg" alt="html logo" class="logosvg">
-    <img src="images/figma-logo.svg" alt="figma logo" class="logosvg">
-    <img src="images/javascript-logo.svg" alt="javascript logo" class="logosvg">
-    <img src="images/css-logo.svg" alt="css logo" class="logosvg">
-    </div>
-    <div class="project-desc col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10">
-        <p>A team based web-page redesign for the Fanshawe Interactive 2027 Website with the purpose of showing off our skills and advertising the IDP program. I worked on the project as the project manager and one of the front-end devs.</p>
-    </div>
-    <div class="explore-bttn col-span-full m-col-start-3 m-col-end-6 l-col-start-3 l-col-end-6">
-        <div class="explore"><a href="#">Explore</a></div>
-    </div>
-    </div>
+     <?php endif; ?>
 
+    <div class="col-start-2 col-end-5 m-col-start-5 m-col-end-8 l-col-start-5 l-col-end-8 project-type">
+            <p>
+                <?php echo $projects['project_type'];?>
+            </p>
+        </div>
 
-    <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
-        <h3>Bluetooth Speaker</h3>
-     </div>
-        <div class="project col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">
-    <div class="image-placeholder" id="project2">Project 2</div>
-    <div class="col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-type">
-        <p>Webpage and 3D Design</p>
-    </div>
-     <div>
-         <img src="images/html-logo.svg" alt="html logo" class="logosvg">
-    <img src="images/figma-logo.svg" alt="figma logo" class="logosvg">
-    <img src="images/javascript-logo.svg" alt="javascript logo" class="logosvg">
-    <img src="images/css-logo.svg" alt="css logo" class="logosvg">
-     <img src="images/cinema-logo.svg" alt="cinema4d logo" class="logosvg">
-     </div>
-      <div class="project-desc col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10">
-        <p>A webpage design featuring a 3D model of a bluetooth speaker of my own design using hotspots to show off the innerworkings of the product.</p>
-    </div>
-    <div class="explore-bttn col-span-full m-col-start-3 m-col-end-6 l-col-start-3 l-col-end-6">
-        <div class="explore"><a href="#">Explore</a></div>
-    </div>
-    </div>
-
-
-
-    <div class="col-start-2 col-end-4 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-showcase">
-        <h3>Quatro Brand Refresh</h3>
-    </div>
-        <div class="project col-start-2 col-end-4 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">
-    <div class="image-placeholder" id="project3">Project 3</div>
-      <div class="col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10 project-type">
-        <p>Webpage and 3D Design</p>
-    </div>
-   <div class="col-span-full m-col-start-5 m-col-end-9 l-col-start-6 l-col-end-9">
-         <img src="images/html-logo.svg" alt="html logo" class="logosvg">
-    <img src="images/figma-logo.svg" alt="figma logo" class="logosvg">
-    <img src="images/javascript-logo.svg" alt="javascript logo" class="logosvg">
-    <img src="images/css-logo.svg" alt="css logo" class="logosvg">
-     <img src="images/cinema-logo.svg" alt="cinema4d logo" class="logosvg">
-     </div>
-    <div class="project-desc col-start-2 col-end-5 m-col-start-5 m-col-end-10 l-col-start-5 l-col-end-10">
-        <p>A webpage design featuring a 3D model of a drink bottle of my own design and a complete brand refresh featuring three working pages.</p>
-    </div>
+        <div class="project-desc col-start-2 col-end-5 m-col-start-3 m-col-end-10 l-col-start-3 l-col-end-10">
+            <p>
+                <?php echo $projects['project_description'];?>
+            </p>
+        </div>
 
     <div class="explore-bttn col-span-full m-col-start-3 m-col-end-6 l-col-start-3 l-col-end-6">
-        <div class="explore"><a href="#">Explore</a></div>
+        <div class="explore"><a href="<?php echo $projects['project_link'];?>">Explore</a></div>
     </div>
     </div>
+
+ <?php endwhile; ?>
+
 
 </section>
 
