@@ -17,3 +17,15 @@ header {
     background-color: a.$primary-color;
     border-bottom: 1px solid white;
 }
+
+.hero-box {
+    background: url(../images/hero-section.png) no-repeat;
+    height: 30vh;
+     padding: 20px;
+   text-align: center;
+}
+
+#name, #profession, #slogan {
+    color: white;
+    background: rgba(0, 0, 0, 0.52);
+}
